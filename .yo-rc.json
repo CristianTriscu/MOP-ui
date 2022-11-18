@@ -1,0 +1,15 @@
+{
+  "generator-ui5-ts-app": {
+    "application": "MOP",
+    "namespace": "com.simpre",
+    "framework": "SAPUI5",
+    "frameworkVersion": "1.108.0",
+    "author": "cristian.triscu",
+    "initrepo": false,
+    "tstypes": "@sapui5/ts-types-esm",
+    "tstypesVersion": "1.108.0",
+    "appId": "com.simpre.MOP",
+    "appURI": "com/simpre/MOP",
+    "setupCompleted": true
+  }
+}
