@@ -1,43 +1,31 @@
-ID: MOP-ui
-_schema-version: "3.1"
-parameters:
-  deploy_mode: html5-repo
+ID: ui5-approuter
+_schema-version: 3.2.0
 version: 1.0.0
+parameters:
+  enable-parallel-deployments: true
+
 modules:
-  #####################################################################################################################
-  # UI  deployer - uploads zipped web application content into the HTML5 Application Repository
-  #####################################################################################################################
-  - name: webapp_deployer
-    type: com.sap.application.content
-    path: deployer
-    requires:
-      - name: MOP-ui-html5-host
-        parameters:
-          content-target: true
-    build-parameters:
-      build-result: resources
-      requires:
-        - name: uimodule
-          artifacts:
-            - uimodule.zip
-          target-path: resources/
-  #####################################################################################################################
-  # Apps (UI5 build and archive creation)
-  #####################################################################################################################
-  - name: uimodule
+  - name: ui5
     type: html5
-    path: uimodule
+    path: ./
     build-parameters:
       builder: custom
       commands:
         - npm install
-        - npm run build:uimodule --prefix ..
+        - ui5 build --dest ./approuter/webapp
       supported-platforms: []
-      build-result: dist
+  - name: approuter
+    type: approuter.nodejs
+    path: approuter
+    parameters:
+      disk-quota: 256M
+      memory: 256M
+    requires:
+      - name: html5-destination
 resources:
-  - name: MOP-ui-html5-host
+  - name: html5-destination
     type: org.cloudfoundry.managed-service
     parameters:
-      service: html5-apps-repo
-      service-name: MOP-ui-html5-host
-      service-plan: app-host 
+      service-plan: lite
+      service: destination
+      path: ./destinations.json

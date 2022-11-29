@@ -1,14 +1,14 @@
 specVersion: "2.6"
 metadata:
-  name: com.simpre.MOP
+  name: com.triscu.mop
 type: application
 resources:
   configuration:
     paths:
-      webapp: webapp/dist
+      webapp: dist
 framework:
   name: SAPUI5
-  version: "1.108.0"
+  version: "1.96.16"
   libraries:
     - name: sap.m
     - name: sap.ui.core

@@ -1,0 +1,32 @@
+{
+	"name": "com.triscu.mop",
+	"version": "1.0.0",
+	"buildTimestamp": "202211292112",
+	"scmRevision": "",
+	"libraries": [
+		{
+			"name": "sap.m",
+			"version": "1.96.14",
+			"buildTimestamp": "202211292112",
+			"scmRevision": ""
+		},
+		{
+			"name": "sap.ui.core",
+			"version": "1.96.14",
+			"buildTimestamp": "202211292112",
+			"scmRevision": ""
+		},
+		{
+			"name": "sap.ui.layout",
+			"version": "1.96.14",
+			"buildTimestamp": "202211292112",
+			"scmRevision": ""
+		},
+		{
+			"name": "sap.ui.unified",
+			"version": "1.96.14",
+			"buildTimestamp": "202211292112",
+			"scmRevision": ""
+		}
+	]
+}
