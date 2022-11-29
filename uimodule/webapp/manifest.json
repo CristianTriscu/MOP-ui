@@ -1,6 +1,5 @@
 {
 	"_version": "1.12.0",
-
 	"sap.app": {
 		"id": "com.simpre.MOP",
 		"type": "application",
@@ -9,21 +8,31 @@
 		"description": "{{appDescription}}",
 		"applicationVersion": {
 			"version": "1.0.0"
+		},
+		"crossNavigation": {
+			"inbounds": {
+				"intent1": {
+					"signature": {
+						"parameters": {},
+						"additionalParameters": "allowed"
+					},
+					"semanticObject": "Dynamic",
+					"action": "display",
+					"title": "test",
+					"icon": "sap-icon://calendar"
+				}
+			}
 		}
 	},
-
 	"sap.ui": {
 		"technology": "UI5",
-		"icons": {
-
-		},
+		"icons": {},
 		"deviceTypes": {
 			"desktop": true,
 			"tablet": true,
 			"phone": true
 		}
 	},
-
 	"sap.ui5": {
 		"rootView": {
 			"viewName": "com.simpre.MOP.view.App",
@@ -31,7 +40,6 @@
 			"async": true,
 			"id": "app"
 		},
-
 		"dependencies": {
 			"minUI5Version": "1.108.0",
 			"libs": {
@@ -41,14 +49,11 @@
 				"sap.m": {}
 			}
 		},
-
 		"handleValidation": true,
-
 		"contentDensities": {
 			"compact": true,
 			"cozy": true
 		},
-
 		"models": {
 			"i18n": {
 				"type": "sap.ui.model.resource.ResourceModel",
@@ -57,7 +62,6 @@
 				}
 			}
 		},
-
 		"routing": {
 			"config": {
 				"routerClass": "sap.m.routing.Router",
@@ -72,14 +76,27 @@
 					"pattern": "",
 					"name": "LandingPage",
 					"target": "LandingPage"
+				},
+				{
+					"pattern": "NavigationTest",
+					"name": "NavigationTest",
+					"target": "NavigationTest"
 				}
 			],
 			"targets": {
 				"LandingPage": {
 					"viewId": "LandingPage",
 					"viewName": "LandingPage"
+				},
+				"NavigationTest": {
+					"viewId": "NavigationTest",
+					"viewName": "NavigationTest"
 				}
 			}
 		}
+	},
+	"sap.cloud": {
+		"public": true,
+		"service": "simpreMOP"
 	}
 }
