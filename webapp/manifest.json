@@ -1,6 +1,5 @@
 {
 	"_version": "1.12.0",
-
 	"sap.app": {
 		"id": "com.triscu.mop",
 		"type": "application",
@@ -11,19 +10,15 @@
 			"version": "1.0.0"
 		}
 	},
-
 	"sap.ui": {
 		"technology": "UI5",
-		"icons": {
-
-		},
+		"icons": {},
 		"deviceTypes": {
 			"desktop": true,
 			"tablet": true,
 			"phone": true
 		}
 	},
-
 	"sap.ui5": {
 		"rootView": {
 			"viewName": "com.triscu.mop.view.App",
@@ -31,7 +26,6 @@
 			"async": true,
 			"id": "app"
 		},
-
 		"dependencies": {
 			"minUI5Version": "1.96.16",
 			"libs": {
@@ -41,14 +35,11 @@
 				"sap.m": {}
 			}
 		},
-
 		"handleValidation": true,
-
 		"contentDensities": {
 			"compact": true,
 			"cozy": true
 		},
-
 		"models": {
 			"i18n": {
 				"type": "sap.ui.model.resource.ResourceModel",
@@ -57,14 +48,14 @@
 				}
 			}
 		},
-
 		"routing": {
 			"config": {
 				"routerClass": "sap.m.routing.Router",
 				"viewType": "XML",
 				"viewPath": "com.triscu.mop.view",
 				"controlId": "app",
-				"controlAggregation": "pages",
+				"controlAggregation": "content",
+				"clearControlAggregation": true,
 				"async": true
 			},
 			"routes": [
@@ -72,12 +63,21 @@
 					"pattern": "",
 					"name": "main",
 					"target": "main"
+				},
+				{
+					"pattern": "NavigationTest",
+					"name": "NavigationTest",
+					"target": "NavigationTest"
 				}
 			],
 			"targets": {
 				"main": {
 					"viewId": "main",
 					"viewName": "Main"
+				},
+				"NavigationTest": {
+					"viewId": "NavigationTest",
+					"viewName": "NavigationTest"
 				}
 			}
 		}

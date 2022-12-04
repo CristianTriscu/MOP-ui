@@ -8,7 +8,11 @@ import models from "./model/models";
 export default class Component extends UIComponent {
 
 	public static metadata = {
-		manifest: "json"
+		manifest: "json",
+		config: {
+			fullWidth: true,
+		},
+		
 	};
 
 	private contentDensityClass : string;

@@ -14,6 +14,17 @@ sap.ui.define(["sap/m/MessageBox", "./BaseController", "../model/formatter"], fu
     },
     sayHello: function _sayHello() {
       MessageBox.show("Hello World!");
+    },
+    pressTile: function _pressTile(oEvent) {
+      //const i18n: Model = this.getView().getModel("i18n");
+
+      // const scheduleJobs:unknown = i18n.getProperty("ScheduleJobs");
+      // const systemConfiguration:unknown = i18n.getProperty("SystemsConfiguration");
+      // const jobsConfiguration:unknown = i18n.getProperty("JobConfiguration");
+      const sHeaderName = oEvent.getSource().getHeader();
+      if (sHeaderName === "navigationTest") {
+        this.navTo("NavigationTest", {});
+      }
     }
   });
   return Main;

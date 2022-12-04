@@ -1,9 +1,24 @@
-<mvc:View
-	controllerName="com.triscu.mop.controller.App"
-	displayBlock="true"
-	xmlns="sap.m"
-	xmlns:mvc="sap.ui.core.mvc">
 
-	<App id="app" />
+<mvc:View xmlns:mvc="sap.ui.core.mvc" xmlns:f="sap.f" displayBlock="true" xmlns="sap.m" controllerName="com.triscu.mop.controller.App" height="100%">
+<Shell showLogout="false" appWidthLimited="false" >
+    <App busy="{appView>/busy}" busyIndicatorDelay="0" height="100%"  autoFocus="false">
+        <Page id="app" class="sapMBrandingBar-CTX sapUiResponsivePadding--header">
+            <customHeader>
+                <f:ShellBar title="{i18n>appTitle}"
+			secondTitle="Short description"
+			homeIcon="https://w7.pngwing.com/pngs/722/1011/png-transparent-logo-icon-instagram-logo-instagram-logo-purple-violet-text.png"
 
+			showSearch="true"
+			showNotifications="true"
+			showProductSwitcher="true"
+			notificationsNumber="2">
+				
+                    <f:profile>
+                        <Avatar src="sap-icon://sap-ui5" />
+                      </f:profile>                    
+                </f:ShellBar>
+            </customHeader>
+        </Page>        
+    </App>
+</Shell>
 </mvc:View>

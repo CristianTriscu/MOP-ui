@@ -9,7 +9,10 @@ sap.ui.define(["sap/ui/core/UIComponent", "sap/ui/Device", "./model/models"], fu
    */
   const Component = UIComponent.extend("com.triscu.mop.Component", {
     metadata: {
-      manifest: "json"
+      manifest: "json",
+      config: {
+        fullWidth: true
+      }
     },
     init: function _init() {
       // call the base component's init function
