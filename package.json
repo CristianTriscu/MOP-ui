@@ -7,7 +7,7 @@
   "main": "index.js",
   "scripts": {
     "build": "ui5 build --clean-dest",
-    "buid-to-deploy": "mtb build",
+    "buid-to-deploy": "mbt build",
     "deploy": "cf deploy mta_archives/ui5-approuter_1.0.0.mtar",
     "build:opt": "ui5 build self-contained --clean-dest --all",
     "start": "ui5 serve --port 8080 -o index.html",
